@@ -25,3 +25,7 @@ p.lista{
     color:khaki;
     text-align:left;
 }
+
+p.grande{
+    font-size: 200%;
+}
