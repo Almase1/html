@@ -1,0 +1,29 @@
+html{
+    background-color: darkgrey;
+}
+
+body{
+    color: lightblue;
+}
+p{
+    color: red;
+    text-align: center;
+}
+header{
+    text-align: right;
+    color: green;
+}
+article{
+    text-align: center;
+    color: red;
+}
+#cabecera{
+    font-size: 200%;
+}
+.prueba{
+    font-size: 100%;
+    margin: 25%;
+}
+p.prueba{
+    font-size: 300%;
+}
