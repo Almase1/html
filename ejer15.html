@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        tr.estilo1{
+            background-color: greenyellow;
+        }
+        #t01{
+            background-color: indigo;
+        }
+        #t01:hover{
+            background-color: lawngreen;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <caption>TITULO DE TABLA</caption>
+        <tr style="background-color: rgb(230, 225, 225);">
+            <th>Item</th>
+            <th>Qty</th>
+            <th>@</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td style="background-color: firebrick;">Papers</td>
+            <td>100</td>
+            <td>1.15</td>
+            <td>115.00</td>
+        </tr>
+        <tr style="background-color: goldenrod;">
+            <td>Wastepaper<br/> Baskets</td>
+            <td >2</td>
+            <td>17.99</td>
+            <td>35.98</td>
+        </tr>
+        <tr class="estilo1">
+           <td colspan="3">Subtotal</td>
+           <td>610.88</td>
+        </tr>
+        <tr id="t01">
+            <td colspan="2">Tax</td>
+            <td>7%</td>
+            <td>42.76</td>
+         </tr>
+         <tr style="background-color: rgb(230, 225, 225);;">
+             <td colspan="3">TOTAL</td>
+             <td>653.64</td>
+         </tr>
+    </table>
+
+</body>
+</html>
