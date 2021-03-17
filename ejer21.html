@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="text/javascript">
+        function verDatos()
+        {
+            var a1=document.getElementById('edad').value;
+            document.edad1.value=a1;
+            alert(10);
+        }
+     
+     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
-    <form name="formulario1" method="get" action="pintar.php">
+    <form name="formulario1" method="get" action="#">
     <fieldset >
         <legend> Formulario </legend>        
             <label>Tipo de Documento</label>
@@ -47,15 +57,21 @@
             <input type="month" name="mes"/>
             <br/>
             <label>Edad</label>
-            <input type="number" min="10" max="20" name="edad"/>
+            <input type="number" min="10" max="20" name="edad" id="edad"/>
             <br/>
             <label>Años de experiencia (10 a 20) </label>
             <input type="range" min="10" max="20"/>
             <br/>
-            <input type="submit" value="Aceptar" style="background-color: rgb(206, 206, 206);color:black">
-        </form>
+           <input type="button" name="formulario" onclick="verDatos()">
+            
+   
+<h1>RESULTADO</h1>
 
-
-
+<table>
+    <tr>
+        <td><input type="text" name="edad1" id="edad1"></input> </td>
+    </tr>
+</table>
+</form>
 </body>
 </html>
