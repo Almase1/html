@@ -1,0 +1,18 @@
+
+
+
+
+div{
+    margin: 20px;
+    border:chartreuse solid 5px;
+    padding: 50px;
+    width: 500px;
+}
+
+#caja1{
+    margin:170px;
+    border:0px;
+    padding: 20px;
+    width: 200px;
+    background-color: aqua;
+}
