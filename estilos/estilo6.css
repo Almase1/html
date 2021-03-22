@@ -1,0 +1,28 @@
+p{
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightslategray;   
+    border-radius: 10px;
+    border-right-style: dotted;
+    border-top-left-radius: 0px;
+
+}
+
+#sombras{
+border-style: solid;
+border-radius: 0px 0px 0px 0px;
+box-shadow: 5px 10px 2px red,-5px -5px 10px blue;
+
+}
+
+#sombras1{
+
+    border-style: none;
+    background-color: lightgrey;
+    box-shadow: -5px -5px 0px gray;
+    border-radius: 0px 0px 0px 0px;
+
+    
+    
+    }
+    
