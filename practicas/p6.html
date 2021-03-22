@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Practica de formularios</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h1>DATOS DE CONTACTO</h1>
+    <FORM ACTION=”http://www.host.com/vfor.asp” METHOD="POST">
+        <fieldset id="caja" >
+            <legend>Formulario de contacto </legend>
+        <p>Escriba su usuario:</p>
+       
+        <INPUT TYPE="text" NAME="usuario" SIZE="10" MAXLENGTH="12">
+        <INPUT TYPE="password" NAME="clave" SIZE="10" MAXLENGTH="12">    
+        <p>    Introduzca sus sugerencias o comentarios:</p>
+        <TEXTAREA NAME="Comentarios" ROWS="6" COLS="40"> </TEXTAREA>
+        <p>¿Cómo nos conoció?</p>
+    
+        <SELECT NAME="Contacto">
+            <OPTION value=”casualidad”>Por casualidad </OPTION>
+            <OPTION value=”periodico”>Por el periodico </OPTION>
+            <OPTION value=”buscadores”>En los buscadores </OPTION>
+            <OPTION value=”comentario”>Me lo comentaron </OPTION>
+        </SELECT>
+        <p>¿Desea recibir información acerca de nuestros productos?</p>
+        <INPUT TYPE="checkbox" NAME="Lista">
+        
+        <p>¿Cuál es su sistema operativo preferido?</p>
+        <BR>
+        <INPUT TYPE="radio" NAME="SistemaOperativo" VALUE="NT" CHECKED>
+        Windows NT
+        <INPUT TYPE="radio" NAME="SistemaOperativo" VALUE="Mac">
+        Mac
+        <INPUT TYPE="radio" NAME="SistemaOperativo" VALUE="Unix">
+        Unix
+        <P><INPUT TYPE="submit" VALUE="Enviar datos"> &nbsp;&nbsp;<INPUT TYPE="reset" VALUE="Borrar datos">
+        </fieldset>
+    </FORM>
+</body>
+
+</html>
