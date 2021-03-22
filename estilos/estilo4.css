@@ -1,0 +1,15 @@
+p
+{
+    font-family: fantasy;
+}
+#p1{
+    font-family: "Arial";
+ 
+}
+
+#p2{
+    font-family: Arial, fantasy, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 10vw;
+}
