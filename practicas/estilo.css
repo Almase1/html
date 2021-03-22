@@ -1,0 +1,35 @@
+html{
+    background-color: darkgrey;
+}
+
+body{
+    color: rgb(221, 12, 92);
+       margin-left: 20%;
+   
+}
+p{
+    color: rgb(0, 38, 255);
+    text-align: left;
+    font-size: 130%;
+}
+header{
+    text-align: right;
+    color: green;
+}
+article{
+    text-align: center;
+    color: red;
+}
+#caja{
+    font-size: 120%;
+    border-color: dodgerblue;
+    color:black;
+    
+}
+.prueba{
+    font-size: 100%;
+    margin: 25%;
+}
+p.prueba{
+    font-size: 300%;
+}
