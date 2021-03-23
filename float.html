@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fixed{
+            border: 3px solid red;
+            bottom:0px;;
+            left:30px;
+            
+            position:absolute;
+        }
+        .relativo{
+            position: relative;
+            width: 300px;
+            height: 200px;
+            border:2px solid red;
+        }
+        .absoluto{
+            position: absolute;
+            top:50px;
+            right: 0px;
+            width: 100px;
+            height: 100px;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <p>ESTO es un ejemplo</p>
+    <div class="fixed">
+        Este es un elemento de esa caja
+    </div>
+    <p>Esto es otro ejemplo</p>
+    <div class="relativo">
+        Esto es un DIV relativo
+        <div class="absoluto">
+            Esto es un DIV absoluto
+        </div>
+    </div>
+    <p>Esto es otro ejemplo</p>
+</body>
+</html>
