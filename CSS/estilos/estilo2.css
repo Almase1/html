@@ -1,0 +1,61 @@
+
+
+
+
+div{
+    margin: 20px;
+    border:chartreuse solid 5px;
+    padding: 50px;
+    width: 500px;
+}
+
+#caja1{
+    margin:170px;
+    border:0px;
+    padding: 20px;
+    padding-top: 5px;
+    width: 200px;
+    background-color: aqua;
+}
+
+
+#caja2{
+    margin:90px;
+    border:0px;
+    padding: 20px;
+    padding-top: 5px;
+    width: 500px;
+    background-color: aqua;
+}
+
+img.top{
+    vertical-align: top;
+}
+
+img.centro{
+    vertical-align: middle;
+}
+h1{
+    text-decoration: overline;
+    text-transform: lowercase;
+    text-shadow: 2px 2px blue;
+}
+h2{
+text-decoration:line-through ;
+text-transform: capitalize;
+}
+h3{
+text-decoration: underline;
+text-transform: uppercase;
+}
+
+#sombra1 {
+    color: orange;
+    text-shadow: 5px 7px;
+}
+
+#sombra2 {
+    color: rgb(118, 182, 118);
+    text-shadow: 5px 7px 10px green;
+}
+

@@ -1,0 +1,41 @@
+#primero{
+    font-size: 40px;
+    color:white;
+    text-shadow: 1px 1px 2px red, 5px 5px 5px red, -5px -5px 5px red;
+}
+
+#segundo{
+    font-size: 40px;
+    color:white;
+    text-shadow: 1px 1px 2px red, 5px 5px 5px blue,
+     -5px -5px 5px green;
+}
+
+#tercero{
+    background-color: lightgrey;
+    font-size: 40px;
+    color:white;
+    
+    text-shadow: 1px 1px 1px black
+}
+
+#cuarto{
+    background-color: grey;
+    font-size: 40px;
+    color:grey;
+    
+    text-shadow: -1px -1px 1px white
+}
+
+#quinto{
+    background-color: lightgrey;
+    font-size: 40px;
+    color:lightgrey;    
+    text-shadow: -1px -1px 1px black, 1px 1px 1px white;
+}
+
+#sexto{
+font-size: 40px;;
+    text-shadow: 10px 10px 5px;
+
+}
