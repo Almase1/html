@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplos Javascript</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script>src = "bootstrap.min.js"</script>
+    <script>src = "jquery-3.6.0.min.js"</script>
+    <script>src = "https://unpkg.com/@popperjs/core@2"</script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="modal" id="mimodal">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">X</button>
+                    <h4 class="modal-title">Login to site.com</h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="card style="width: 18rem;"">
+                            <form novalidate="novalidate">
+                                <div class="form-group">
+                                    <label for="username" class="control-label">Username:</label>
+                                    <input type="text" class="form-control" id="username" name="username" value="" placeholder="example@mail.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="control-label">Password:</label>
+                                    <input type="password" class="form-control" id="password" name="password" value="" required>
+                                </div>
+
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="remember" id="remember"> Remember me
+                                    </label>
+                                    <p class="help-block">(if this is a private computer)</p>
+                                </div>
+
+                                <button class="btn btn-success btn-block">Login</button>
+                                <button class="btn btn-default btn-block">Help to login</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6">
+                        <p class="lead">Register now for <span class="text-success">FREE</span></p>
+
+                        <ul class="list-unstyled" style="line-height: 2em">
+                            <li><i class="fa fa-check text-success"></i> See all your orders</li>
+                            <li><i class="fa fa-check text-success"></i> Fast re-order</li>
+                            <li><i class="fa fa-check text-success"></i> Save your favorites</li>
+                            <li><i class="fa fa-check text-success"></i> Fast checkout</li>
+                            <li><i class="fa fa-check text-success"></i> Get a gift <small>(only new customers)</small></li>
+                            <li><a href="#" style="text-decoration: underline">Read more</a></li>
+                        </ul>
+
+                        <button class="btn btn-info btn-block">Yes please, register now!</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
