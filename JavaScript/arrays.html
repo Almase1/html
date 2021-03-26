@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="alert alert-success" id="alerta1">Ejemplo</div>
+        <div class="alert alert-warning" id="alerta2">Ejemplo</div>
+        <div class="alert alert-danger" id="alerta3">Ejemplo</div>
+    </div>
+
+    <script>
+        //Crear Arrays
+        var array1 = [1, 90, 10]
+        var personas = new Array("Pedro", "Antonio", "Rosa")
+        //Poner alertas
+        document.getElementById("alerta1").innerHTML = array1
+        document.getElementById("alerta2").innerHTML = personas
+        document.getElementById("alerta3").innerHTML = personas[1]
+
+        //Boolean
+        var correcto = true
+
+        //numeros
+        var num1 = 10
+        var num2 = 90.10
+
+        //Operador
+        //  Asignacion =
+        //  > < ==
+        document.writeln(10 == 10)
+        document.writeln(10 > 10)
+        // &&   ||   ! 
+        document.writeln(10 > 5 && 10 > 20)
+        // + - * / %
+        // if
+        if (10 < 5) {
+            document.write("Es mayor")
+        }
+        else if (10 > 20) {
+            document.write("Es mayor")
+        }
+        else {
+            document.write("Es menor")
+        }
+
+
+    </script>
+</body>
+
+</html>
