@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script>src = "bootstrap.min.js"</script>
+    <script>src = "jquery-3.6.0.min.js"</script>
+    <script>src = "https://unpkg.com/@popperjs/core@2"</script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+
+                <label for="ln1">Formulario</label>
+                <input class="form-control" type="text" id="texto" placeholder="Introduzca texto" name="nombre">
+                <input type="button" class="btn btn-danger" value="aceptar" onclick=aceptar_()>
+
+            </div>
+            <div class="col-sm-6" id="segunda_columna">
+                <div id="contenido" class="alert alert-warning" role="alert">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function aceptar_() {
+            var texto = document.getElementById("texto").value
+            var texto_en_partes = texto.split(" ")
+
+            var contador = 0
+
+            while (texto_en_partes.length > contador) {
+
+                var crear_parrafo = document.createElement("p")
+                var texto_partido = document.createTextNode(texto_en_partes[contador])
+                crear_parrafo.appendChild(texto_partido)
+                var segundo_div = document.getElementById("contenido")
+                segundo_div.appendChild(crear_parrafo)
+                contador++
+
+            }
+
+            /*
+            for(var i = 0; i < texto_en_partes.length; i++){
+            
+                var crear_parrafo = document.createElement("p")
+                var texto_partido = document.createTextNode(texto_en_partes[i])
+                crear_parrafo.appendChild(texto_partido)
+                var segundo_div = document.getElementById("segunda_columna")
+                segundo_div.appendChild(crear_parrafo)
+                
+            
+            }
+               */
+        }
+
+    </script>
+
+</body>
+
+</html>
