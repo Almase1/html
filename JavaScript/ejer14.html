@@ -9,10 +9,22 @@
 <body>
 
     <div id="contenidos" style="width:150px; height:60px; background: red" ;
-        onmouseover="document.getElementById('contenidos').style.background='green';"
-        onmouseout="document.getElementById('contenidos').style.background='red';">
-        Ejemplo de eventos
-    </div>
+    onmouseover="document.getElementById('contenidos').style.background='green';"
+    onmouseout="document.getElementById('contenidos').style.background='red';" 
+    ondblclick="cambiar(this);">
+    
+    
+    Ejemplo de eventos
+
+    
+</div>
+
+<script>
+    function cambiar(obj)
+    {
+        obj.style.background="yellow"
+    }
+</script>
 
 </body>
 
