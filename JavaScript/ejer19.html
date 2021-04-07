@@ -1,32 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="nada.jsp" autocomplete="on" novalidate="novalidate">
-        Nombre:<input type="text" name="fname" /><br />
-        apellidos: <input type="text" name="lname" /><br />
-        correo: <input type="email" name="email" autocomplete="off" /><br />
-        introduzca una URL: <input type="url" name="url" /><br />
-        Cantidad: <input type="number" />
-        <audio controls="controls" src="media/sonido.mp3">
-            <source src="sonido.ogg" type="audio/ogg" />
-            <source src="sonido.mp3" type="audio/mpeg" />
-          El navegador no soporta sonido
-          </audio>
-          <video width="640" src="media/pelicula.mp4" preload="auto" >
-            El navegador no soporta video
-        </video>
-          
-        <input type="submit" />
-      </form>
-      <script>
-             //play()    pause()
 
-      </script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="nada.jsp" autocomplete="on" novalidate="novalidate">
+    Nombre:<input type="text" name="fname" /><br />
+    apellidos: <input type="text" name="lname" /><br />
+    correo: <input type="email" name="email" autocomplete="off" /><br />
+    introduzca una URL: <input type="url" name="url" /><br />
+    Cantidad: <input type="number" />
+    <audio id="audio" src="media/sonido.mp3">
+      <source src="sonido.ogg" type="audio/ogg" />
+      <source src="sonido.mp3" type="audio/mpeg" />
+      El navegador no soporta sonido
+    </audio>
+    <video id="video" width="640" src="media/pelicula.mp4" preload="auto" volume="0.5">
+      El navegador no soporta video
+    </video>
+    <br>
+    <label id="eti">0.5</label>
+    <br>
+    <button onclick="playv()" type="button">Play Video</button>
+    <button onclick="pausev()" type="button">Stop Video</button>
+
+    <button onclick="playa()" type="button">Play Audio</button>
+    <button onclick="pausea()" type="button">Stop Audio</button>
+    <button onclick="subir()" type="button">+</button>
+    <button onclick="bajar()" type="button">-</button>
+
+
+  </form>
+  <script>
+    //Play - Pause  son metodos
+    // Propiedades
+    //  paused --> boolean
+    //  ended --> boolean
+    //   volume --> numero entre 0 y 1   (0.3 -->  30%)
+
+    var vid = document.getElementById("video");
+    var aud = document.getElementById("audio");
+    var etiqueta = document.getElementById("eti");
+    var volumen = 0.5
+
+
+    function playv() {
+      vid.play();
+    }
+    function pausev() {
+      vid.pause();
+    }
+
+    function playa() {
+      aud.play();
+    }
+    function pausea() {
+      aud.pause();
+    }
+    function subir() {
+      volumen = volumen + 0.1
+      if (volumen > 1) { volumen = 1 }
+      vid.volume = volumen
+      eti.innerHTML = volumen
+    }
+
+  </script>
+
 </body>
+
 </html>

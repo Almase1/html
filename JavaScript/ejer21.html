@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video id="video" width="640" src="media/pelicula.mp4"  preload="auto" volume="1" >
+    <!--  autoplay -->
+        El navegador no soporta video
+    </video>
+    <div style="background-color: lightgrey; width:640px">
+    <button onclick="comenzar()">></button>
+    <button onclick="parar()" >||</button>
+    <button onclick="volumen_arriba()">+</button>
+    <button onclick="volumen_abajo()" >-</button>
+    <input type="range"  id="rango" onchange="cambiar_volumen()" name="volumen"  min="0" max="1" step="0.1" value="1"/>
+    <label id="volumen_actual" > volumen actual: 100 % </label>
+    <br>
+    <h2>VIDEO EN YOUTUBE</h2>
+    <iframe width="600" height="650" src="https://www.youtube.com/embed/eW7Twd85m2g"  ></iframe>
+    </div>
+<script>
+   //El RENGe tiene que cambiar el volumen
+   // Etiqueta sed tiene que actualizar
+   //Al usar los botones de + y - el rango se tiene que actualizar
+       
+   function comenzar(){
+        document.getElementById("video").play()
+    }
+
+    function parar(){
+        document.getElementById("video").pause()
+
+    }
+
+    function volumen_arriba(){
+        
+        //Recuperar la porpiedad volume del Video
+        var volumenup=parseFloat(document.getElementById("video").volume)
+        //La incrementa en 0.1
+        var volumenup=volumenup + 0.1;
+        //Actualiza la propiedad volume del video
+        document.getElementById("video").volume=volumenup
+        //Actualiza la propiedad value del rango
+        document.getElementById("rango").value=volumenup        
+        //Actualiza la propiedad innerHTML de la etiqueta
+        document.getElementById("volumen_actual").innerHTML= "volumen actual: " + (volumenup*100) + "%" 
+    }
+
+    function volumen_abajo(){
+        
+        var volumendown=document.getElementById("video").volume
+        var volumendown=volumendown - 0.1;
+        document.getElementById("video").volume=volumendown
+        document.getElementById("rango").value=volumendown                
+        document.getElementById("volumen_actual").innerHTML="volumen actual: " + volumendown*100 +  " %"
+    }
+    function cambiar_volumen()
+    {
+        //Pongo la propiedad volume del video igual a la propiedad value del rango
+        document.getElementById("video").volume=document.getElementById("rango").value
+        //Actualizo la etiqueta con el value del rango
+        document.getElementById("volumen_actual").innerHTML= "volumen actual: " + (document.getElementById("rango").value*100) + "%" 
+
+    }
+
+
+</script>
+</body>
+</html>
