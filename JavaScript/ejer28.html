@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 
 <body>
@@ -14,7 +15,11 @@
     <button id="boton1">Pulsame</button>
 
     <p id="p1">Ejemplo de Listener</p>
-    <p id="p2" style="background-color: black; width: 200px;">hola</p>
+    <p id="p2" style="background-color: black; width: 400px; height: 400px;">hola</p>
+    
+    <input id="cajadetexto" type="text">
+    <br>
+    <label id="texto">TEXTO A CAMBIAR</label>
 
     <script>
         //Listener para detectar un click sobre el boton
@@ -23,6 +28,10 @@
         document.getElementById("p2").addEventListener("dblclick", cambiar_color)
         document.getElementById("p2").addEventListener("mouseover", cambiar_color1)
         document.getElementById("p2").addEventListener("mouseover", cambiar_color2)
+
+        //Listener para detectar tecleo
+        document.getElementById("cajadetexto").addEventListener("keyup", copiar)
+
 
         //Una caja de texto y una label
         // Segun escribamos en la caja de texto, pintamos en la label el texto al reves y en mayusculas
@@ -35,13 +44,35 @@
         function cambiar_color() {
             document.getElementById("p2").style.background = "yellow"
         }
-        function cambiar_color1()
-        {
+        function cambiar_color1() {
             document.getElementById('p2').style.backgroundColor = "red";
         }
         function cambiar_color2() {
             document.getElementById('p2').style.backgroundColor = "black";
         }
+
+
+        function copiar() {
+            //Recuperamos el valor de la caja de texto
+            var text = document.getElementById("cajadetexto").value
+
+            //Ponerlo en mayusculas
+            var mayus = text.toUpperCase();
+
+            //Invertirlo
+            //var invertir = mayus.split('').reverse().join('');
+            // Convertir la cadena en letras en un array
+            var letras=mayus.split('')
+            //Poner el array al reves
+            var reves=letras.reverse()
+            //Lo vuelvo a convertir en cadena con el join
+            var cadena=reves.join('')
+
+
+
+            document.getElementById("texto").innerHTML = cadena
+        }
+
 
     </script>
 </body>

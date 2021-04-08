@@ -1,0 +1,53 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rectangulo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <canvas id="lienzo" width="400px" height="300px" style="border: 1px solid;" onmousemove="posicion(event)"></canvas>
+    <br>
+    <p id="coordenadas">posicion</p>
+    <button id="b1">PINTAR</button>
+    <script>
+        document.getElementById("b1").addEventListener('click', pintar);
+
+        //Localizamos el canvas
+        var l = document.getElementById("lienzo")
+        //Asignamos el contexto
+        var ctx = l.getContext("2d")
+        ctx.beginPath()
+        ctx.moveTo(75, 50);
+        ctx.lineTo(100, 75);
+        ctx.lineTo(100, 25);
+        ctx.fill();
+        ctx.closePath()
+        ctx.stroke()
+
+        function posicion(e) {
+            var posicion = e.clientX + "," + e.clientY
+            document.getElementById("coordenadas").innerHTML = posicion
+        }
+
+        function pintar() {
+            console.log('entro')
+            var l = document.getElementById("lienzo")
+            //Asignamos el contexto
+            var ctx = l.getContext("2d")
+            ctx.beginPath()
+            //ctx.clearRect(0,0,300,300)
+            ctx.moveTo(200, 80);
+            ctx.lineTo(300, 25);
+            ctx.fill();
+            ctx.closePath()
+            ctx.stroke()
+        }
+    </script>
+
+</body>
+
+</html>
