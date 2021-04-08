@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3> Ejemplo de Event Listener</h3>
+
+    <button id="boton1">Pulsame</button>
+
+    <p id="p1">Ejemplo de Listener</p>
+    <p id="p2" style="background-color: black; width: 200px;">hola</p>
+
+    <script>
+        //Listener para detectar un click sobre el boton
+        document.getElementById("boton1").addEventListener("click", hola)
+        //Listener para detectar un doble click en el parrafo
+        document.getElementById("p2").addEventListener("dblclick", cambiar_color)
+        document.getElementById("p2").addEventListener("mouseover", cambiar_color1)
+        document.getElementById("p2").addEventListener("mouseover", cambiar_color2)
+
+        //Una caja de texto y una label
+        // Segun escribamos en la caja de texto, pintamos en la label el texto al reves y en mayusculas
+
+
+        function hola() {
+            document.getElementById('p1').innerHTML = 'hola'
+        }
+
+        function cambiar_color() {
+            document.getElementById("p2").style.background = "yellow"
+        }
+        function cambiar_color1()
+        {
+            document.getElementById('p2').style.backgroundColor = "red";
+        }
+        function cambiar_color2() {
+            document.getElementById('p2').style.backgroundColor = "black";
+        }
+
+    </script>
+</body>
+
+</html>
