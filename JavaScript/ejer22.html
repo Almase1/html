@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="geo">Averigua tus coordenadas</p> 
+   <button onclick="localizar()">ACEPTAR</button>
+   <p id="coordenadas">Aqui van las coordenadas</p>
+
+    <script>
+        //navigator.geolocalization
+
+        //Funcion para localizar las coordenadas
+        function localizar()
+        {
+            // si el navegador soporta geolocalizacion
+            if (navigator.geolocation)
+            {
+                //Recupera las coordenadas y se las pasa a una funcion (en este caso "mostrar")
+                navigator.geolocation.getCurrentPosition(mostrar)
+            }
+            else{
+                document.getElementById("coordenadas").innerHTML="No hay sopporte de GEO"
+            }
+
+        }
+
+        //Funciona para visualizar las coordenadas
+        function mostrar(p)
+        {
+            var parrafo=document.getElementById("coordenadas")
+            parrafo.innerHTML="Latitud:"+p.coords.latitude+" Longitud:"+p.coords.longitude;
+        }
+
+    </script>
+</body>
+</html>
