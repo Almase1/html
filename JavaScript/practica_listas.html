@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Lenguajes ofrecidos</p>
+    <ul id="lista" >
+        <li>Java</li>
+        <li>C++</li>
+        <li>Kotlin</li>
+        <li>Scala</li>
+    </ul>
+    >>
+    <br>
+    << <p>Lenguajes conocidos</p>
+        <ul id="lista1" ondblclick="pasar1()">
+            <li>Cobol</li>
+            <li>Javascript</li>
+        </ul>
+   <script>
+      document.addEventListener("dblclick",pasar(this)) 
+function pasar(m)
+{
+    
+    console.log(m.textContent)
+}
+
+   </script>
+</body>
+
+</html>

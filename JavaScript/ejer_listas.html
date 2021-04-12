@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="ootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div style="background-color: aqua;">
+        <label>Lenguajes disponibles</label>
+        <ul class="list-group">
+            <li class="list-group-item" id="p1">Java</li>
+            <li class="list-group-item" id="p2">C++</li>
+            <li class="list-group-item" id="p3">Koltin</li>
+            <li class="list-group-item" id="p4">Scala</li>
+          </ul>
+    </div>
+    <br>
+    <div style="background-color: chartreuse;">
+        <label>Lenguajes conocidos</label>
+        <ul class="list-group" id="lista_abajo">
+            
+        </ul>
+    </div>
+
+    <script>
+
+        var obj1 = document.getElementById("p1")
+        var obj2 = document.getElementById("p2")
+        var obj3 = document.getElementById("p3")
+        var obj4 = document.getElementById("p4")
+
+        obj1.addEventListener("dblclick", mover)
+        obj2.addEventListener("dblclick", mover)
+        obj3.addEventListener("dblclick", mover)
+        obj4.addEventListener("dblclick", mover)
+
+        function mover(){
+
+            var obj_movido = document.getElementById(this.id)
+            var lista_ab = document.getElementById("lista_abajo")
+            lista_ab.appendChild(obj_movido)
+        }
+
+    </script>
+    
+</body>
+</html>

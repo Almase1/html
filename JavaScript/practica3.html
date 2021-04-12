@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Aqui empiezan las etiquetas</p>
+    <a name="ejer1">Ejercicio1</a>
+    <a name="ejer2">Ejercicio2</a>
+    <a name="ejer3">Ejercicio3</a>
+    <a name="ejer4">Ejercicio4</a>
+    <a name="ejer5">Ejercicio5</a>
+    <a name="ejer6">Ejercicio6</a>
+    <a name="ejer7">Ejercicio7</a>
+    <p>Aqui terminan las etiquetas</p>
+    <button type="button" id="boton_contar">Contar</button>
+    <button type="button" id="boton_voltear">Voltear</button>
+    <br>
+    <label id="resultado_cuentas"></label>
+    <label id="resultado_vuelta"></label>
+
+
+    <script>
+
+        var boton_contar = document.getElementById("boton_contar")
+        boton_contar.addEventListener("click", contar_etiquetas)
+
+        var boton_voltear = document.getElementById("boton_voltear")
+        boton_voltear.addEventListener("click", dar_vuelta)
+
+        function contar_etiquetas(){
+
+            var numeroDeEtiquetas = document.getElementsByTagName("a")
+            var caja_resultado = document.getElementById("resultado_cuentas")
+            caja_resultado.innerHTML = "Tenemos " + numeroDeEtiquetas.length + " etiquetas " + numeroDeEtiquetas[1].innerHTML
+  
+        }
+
+        function dar_vuelta(){
+
+            var numeroDeEtiquetas = document.getElementsByTagName("a")
+            var caja_resultado = document.getElementById("resultado_vuelta")
+
+            for(var i = numeroDeEtiquetas.length-1 ; i >= 0 ; i--){
+
+                caja_resultado.innerHTML =  caja_resultado.innerHTML + "<br>" + numeroDeEtiquetas[i].innerHTML
+
+
+            }
+        }
+    </script>
+
+</body>
+</html>

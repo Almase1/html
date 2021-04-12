@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>hola</p>
+    <a name="ejer1">Ejercicio1</a><br>
+    <a name="ejer2">Ejercicio2</a><br>
+    <a name="ejer3">Ejercicio3</a><br>
+    <a name="ejer3">Ejercicio4</a><br>
+    <p>chao</p>
+    <button id="b1" type="button">Etiquetas A's</button>
+    <br>
+    <button id="b2" type="button">Pintar contenido de los A al reves</button>
+    <br>
+    <label id="result"> Resultado: </label>
+    <br>
+    <label id="result1"> Resultado: </label>
+
+
+
+    <script>
+        //El numero de <a> que hay en el documento
+        //Que pinte el contenido del segundo <a>
+
+        var boton = document.getElementById("b1")
+        boton.addEventListener("click", contador)
+
+        var boton2 = document.getElementById("b2")
+        boton2.addEventListener('click', dar_vuelta)
+
+
+
+        function contador() {
+
+            var array_a = document.getElementsByTagName("a")
+            var longitud = array_a.length
+            document.getElementById("result").innerHTML = longitud + " " + array_a[1].innerHTML
+
+        }
+
+        function listar_al_reves() {
+            var lista1 = document.getElementsByTagName("a")
+            var etiqueta = document.getElementById("resultado1")
+            for (var x = lista1.length - 1; x >= 0; x--) {
+                etiqueta.innerHTML = etiqueta.innerHTML + "<br>" + lista1[x].innerHTML
+            }
+        }
+
+        function dar_vuelta() {
+
+            var numeroDeEtiquetas = document.getElementsByTagName("a")
+            var caja_resultado = document.getElementById("resultado1")
+            for (var i = numeroDeEtiquetas.length - 1; i >= 0; i--) {
+                caja_resultado.innerHTML = caja_resultado.innerHTML + "<br>" + numeroDeEtiquetas[i].innerHTML
+            }
+        }
+
+    </script>
+</body>
+
+
+</html>
