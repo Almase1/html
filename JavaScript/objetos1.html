@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4">Ejemplo de JumboTron</h1>
+        <p class="lead">Ejemplo de Jumbotron</p>
+        <hr class="my-4">
+        <p id="p1">aqui tengo un parrafo</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" id="boton" href="#" role="button">Aceptar</a>
+        </p>
+    </div>
+
+
+
+    <script>
+        var b = document.getElementById("boton")
+        b.addEventListener('click', pintar())
+
+        var coche = {
+            matricula: "XXXXX",
+            cv: 90,
+            ruedas: 4,
+            pvp: 10000
+        }
+
+        var x=10
+
+        function pintar() {
+
+            document.getElementById("p1").innerHTML = x
+        }
+    </script>
+
+</body>
+
+</html>

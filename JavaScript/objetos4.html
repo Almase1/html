@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4">Propiedades</h1>
+        <p class="lead">Propiedades del coche</p>
+        <hr class="my-4">
+        <p id="p1">Haz click en propiedades.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" onclick="propiedades()" href="#" role="button">Propiedades</a>
+        </p>
+    </div>
+
+    <script>
+function propiedades() {
+        var coche = {
+            matricula:"XXXXX",
+            cv:90,
+            ruedas:4,
+            pvp:10000
+        }
+        
+            document.getElementById("p1").innerHTML = "La matrícula es: " + coche.matricula + "<br>" + "Los caballos son: " + coche.cv + "<br>" + "El coche tiene: " + coche.ruedas + " ruedas." + "<br>" + "El precio de venta es: " + coche.pvp + " euros."
+        
+        }
+
+
+    </script>
+
+</body>
+
+</html>
