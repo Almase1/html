@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>querySelector() Demo</title>
+</head>
+
+<body>
+
+
+
+    <header>
+        <div id="logo">
+            <img src="imagenes/imagen2.jpg" alt="Logo" id="logo">
+        </div>
+        <label>
+            <input type="checkbox" id="ejer1" value="ejer1" onchange="ejer1()">Cambiar todas las section a amarillo
+        </label><br>
+        <label>
+            <input type="checkbox" id="ejer2" value="ejer2" onchange="ejer2()">Cambiar todos los H2 a rojo
+        </label><br>
+        <label>
+            <input type="checkbox" id="ejer3" value="ejer3" onchange="ejer3()">cambiar a verde los hijos de
+            class=section-a
+        </label><br>
+        <label>
+            <input type="checkbox" id="ejer4" value="ejer4" onchange="ejer4()">cambiar a rosa los descendientes de
+            id=division
+        </label><br>
+        <label>
+            <input type="checkbox" id="ejer5" value="ejer5" onchange="ejer5()">cambiar a azul los hermanos de cualquier
+            h2
+        </label><br>
+        <label>
+            <input type="checkbox" id="ejer6" value="ejer6" onchange="ejer6()">cambiar a amarillo los elemantos
+            anchor que tengan una propiedad llamada name=acerca_de
+        </label><br>
+        <label>
+            <input type="checkbox" id="ejer7" value="ejer7" onchange="ejer7()">cambiar a rojo los hijos de cualquier "ul"            
+        </label><br>
+        <label>
+            <input type="checkbox" id="ejer8" value="ejer8" onchange="ejer8()">cambiar a verde los elementos que tengan el atributo "alt"
+
+        </label><br>
+        <nav class="primary-nav">
+            <ul>
+                <li class="menu-item current"><a href="http://www.elmundo.es">Home</a></li>
+                <li class="menu-item"><a href="#services">Services</a></li>
+                <li class="menu-item"><a href="#about" name="acerca_de">About</a></li>
+                <li class="menu-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to the JS Dev Agency</h1>
+
+        <div class="container">
+            <section class="section-a">
+                <h2>UI/UX</h2>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem placeat, atque accusamus voluptas
+                        laudantium facilis iure adipisci ab veritatis eos neque culpa id nostrum tempora tempore minima.
+                        Adipisci, obcaecati repellat.</p>
+                </div>
+                <button alt="prueba">Read More</button>
+            </section>
+            <section class="section-b">
+                <h2>PWA Development</h2>
+                <div id="division">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni fugiat similique illo nobis
+                        quibusdam
+                        commodi aspernatur, tempora doloribus quod, consectetur deserunt, facilis natus optio. Iure
+                        provident labore nihil in earum.
+                    </p>
+                    <button>Read More</button>
+                </div>
+            </section>
+            <section class="section-c">
+                <h2>Mobile App Dev</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eos culpa laudantium consequatur ea!
+                    Quibusdam, iure obcaecati. <span>nada </span>Adipisci deserunt, alias repellat eligendi odit labore!
+                    Fugit iste sit
+                    laborum debitis eos?</p>
+                <button>Read More</button>
+            </section>
+        </div>
+    </main>
+
+
+    <script>
+        // Pruebas con querySelector
+        //Cambiar todas las section a amarillo
+        function ejer1() {
+            if (document.getElementById("ejer1").checked) {
+                var c = "yellow"
+            }
+            else {
+                var c = "white"
+            }
+
+            var secciones = document.querySelectorAll("section")
+
+            for (x = 0; x < secciones.length; x++) {
+                secciones[x].style.backgroundColor = c
+            }
+        }
+
+        //Cambiar todos los H2
+        function ejer2() {
+            if (document.getElementById("ejer2").checked) {
+                var c = "red"
+            }
+            else {
+                var c = "white"
+            }
+
+            var array1 = document.querySelectorAll("h2")
+
+            for (x = 0; x < array1.length; x++) {
+                array1[x].style.backgroundColor = c
+            }
+        }
+
+        //Cambiar a verde los hijos de class=section-a
+        function ejer3() {
+            if (document.getElementById("ejer3").checked) {
+                var c = "green"
+            }
+            else {
+                var c = "white"
+            }
+
+            var array1 = document.querySelectorAll(".section-a > *")
+
+            for (x = 0; x < array1.length; x++) {
+                array1[x].style.backgroundColor = c
+            }
+        }
+
+        //cambiar a rosa los descendientes de id=division
+        function ejer4() {
+            if (document.getElementById("ejer4").checked) {
+                var c = "pink"
+            }
+            else {
+                var c = "white"
+            }
+
+            var array1 = document.querySelectorAll("#division  *")
+
+            for (x = 0; x < array1.length; x++) {
+                array1[x].style.backgroundColor = c
+            }
+        }
+        //cambiar a azul los hermanos de cualquier h2
+        function ejer5() {
+            if (document.getElementById("ejer5").checked) {
+                var c = "blue"
+            }
+            else {
+                var c = "white"
+            }
+
+            var array1 = document.querySelectorAll("h2 ~ *")
+
+            for (x = 0; x < array1.length; x++) {
+                array1[x].style.backgroundColor = c
+            }
+        }
+
+        //cambiar a amarillo los elementos <a> que tengan el nombre="acerca_de"
+        function ejer6() {
+            if (document.getElementById("ejer6").checked) {
+                var c = "yellow"
+            }
+            else {
+                var c = "white"
+            }
+
+            var array1 = document.querySelectorAll("a[name=acerca_de]")
+
+            for (x = 0; x < array1.length; x++) {
+                array1[x].style.backgroundColor = c
+            }
+        }
+        function ejer7() {
+            if (document.getElementById("ejer7").checked) {
+                var c = "red"
+            }
+            else {
+                var c = "white"
+            }
+
+            var array1 = document.querySelectorAll("ul > *")
+
+            for (x = 0; x < array1.length; x++) {
+                array1[x].style.backgroundColor = c
+            }
+        }
+        function ejer8() {
+            if (document.getElementById("ejer8").checked) {
+                var c = "green"
+            }
+            else {
+                var c = "white"
+            }
+
+            var array1 = document.querySelectorAll("[alt]")
+
+            for (x = 0; x < array1.length; x++) {
+                array1[x].style.backgroundColor = c
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

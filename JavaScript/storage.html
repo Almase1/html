@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Introduce propiedad
+    <input id="nombre"> Valor:
+    <input id="valor">
+    <button type="button" onclick="Crear();">Crear Storage</button>
+
+
+    <p id="p1"></p>
+
+    <script>
+        //definimos el objeto con propiedades y metodos
+
+
+        /* var alumno={
+            nombre:"",
+            apellidos:"",
+            edad:0,
+            ver: function(){
+                return nombre +" " + apellidos
+            }
+        }
+
+        //constructor que se llama como el objeto
+
+        function Alumno(n,a){
+            this.nombre=n
+            this.apellidos=a
+        }
+
+        //me permite crear instancias del objeto
+
+
+        var alu1=new Alumno("pedro", "rodriguez")
+        var alu2=new Alumno("jose","peres")
+        document.getElementById("p1").innerHTML=alu1.nombre + " y " + alu2.nombre */
+
+
+
+        function Factura(codigo, prod, pvp) {
+            this.cod_factura = codigo
+            this.producto = prod
+            this.pvp = pvp
+            this.ver = function () {
+                var resumen = "Codigo: " + this.cod_factura + " Producto: " + this.producto + " pvp: " + this.pvp
+                return resumen
+            }
+
+        }
+
+        var fact1 = new Factura(185661, "Agua", 1.00)
+        var fact2 = new Factura(1932123, "telefono", 500)
+        var fact3 = new Factura(5284545, "tv", 1000)
+
+        document.getElementById("p1").innerHTML = "<br> factura 1:  " + fact1.ver() + "<br> factura 2:  " + fact2.ver() + "<br>  factura 3: " + fact3.ver()
+
+
+
+
+        function Crear() {
+            nombre = document.getElementById("nombre").value
+            valor = document.getElementById("valor").value
+
+            if (!window.localStorage.getItem(nombre)) {
+                window.localStorage.setItem(nombre, valor)
+                window.sessionStorage.setItem(nombre, valor)
+            }
+
+            else { alert("Ya existe este Storage") }
+
+        }
+    </script>
+</body>
+
+</html>

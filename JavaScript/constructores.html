@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p id="p1">DATOS</p>
+    <script>
+
+        //definimos el Objeto con propiedades y metodos
+        var alumno={
+            nombre:"",
+            apellidos:"",
+            edad:0,
+
+             ver: function()
+            {
+                return nombre
+            }
+        }
+
+        //Constructor que se llama como el objeto
+       function Alumno(n,a)
+       {
+           this.nombre=n
+           this.apellidos=a
+       }
+
+      /* function Alumno()
+       {
+          this.nombre="RRRR"
+       }*/
+
+       //Crear instancias del objeto Alumno
+       var alu1=new Alumno("pedro","rodirugez")
+       var alu2=new Alumno("rosa", "Garcia")
+      // var alu3=new Alumno()
+       document.getElementById("p1").innerHTML=alu1.nombre+" "+alu2.nombre
+
+    </script>   
+</body>
+</html>
