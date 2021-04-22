@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>querySelector() Demo</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="imagenes/imagen2.jpg" alt="Logo" id="logo">
+        </div>
+        <nav class="primary-nav">
+            <ul>
+                <li class="menu-item current"><a href="#home">Home</a></li>
+                <li class="menu-item"><a href="#services">Services</a></li>
+                <li class="menu-item"><a href="#about" name="acerca_de">About</a></li>
+                <li class="menu-item"><a href="#contact">Contact</a></li>
+            </ul>
+            <div>
+                <input type="checkbox" name="checkbox1" id="amarillo" onclick="amarillo()">Section a amarillo
+                 <input type="checkbox" name="checkbox1" id="rojoh2" onclick="rojoh2()">Rojo a todos los h2
+                 <input type="checkbox" name="checkbox1" id="verde" onclick="verde()">Verde los hijos de class=section-a
+                 <input type="checkbox" name="checkbox1" id="azul"  onclick="azul()">Blanco los descendientes de id=division
+                 <input type="checkbox" name="checkbox1" id="azul2" onclick="azul2()">Azul los hermanos de cualquier h2
+                 <input type="checkbox" name="checkbox1" id="rojo2" onclick="rojo2()">Rojo los hijos de cualquier "ul"
+                 <input type="checkbox" name="checkbox1" id="verde2" onclick="verde2()">Verde los elementos que tengan el atributo "alt"
+                <input type="checkbox" name="checkbox1" id="amarillo2" onclick="amarillo2()">Amarillo los elementos "a" que estén en estado "visited"
+            </div>
+            <div>
+                <input type="text" id="selector" placeholder="Selector">
+                <input type="text" id="color" placeholder="Color">
+                <button type="button" id="boton" onclick="ver()"> Pintar </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to the JS Dev Agency</h1>
+
+        <div class="container">
+            <section class="section-a">
+                <h2>UI/UX</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem placeat, atque accusamus voluptas
+                    laudantium facilis iure adipisci ab veritatis eos neque culpa id nostrum tempora tempore minima.
+                    Adipisci, obcaecati repellat.</p>
+                <button>Read More</button>
+            </section>
+            <section class="section-b">
+                <h2>PWA Development</h2>
+                <div id="division">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni fugiat similique illo nobis quibusdam
+                    commodi aspernatur, tempora doloribus quod, consectetur deserunt, facilis natus optio. Iure
+                    provident labore nihil in earum.</p>
+                    <button>Read More</button>
+                </div>
+            </section>
+            <section class="section-c" >
+                <h2>Mobile App Dev</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eos culpa laudantium consequatur ea!
+                    Quibusdam, iure obcaecati. <span>nada </span>Adipisci deserunt, alias repellat eligendi odit labore! Fugit iste sit
+                    laborum debitis eos?</p>
+                <button>Read More</button>
+            </section>
+        </div>
+    </main>
+    <script>
+        function ver(){
+            var color = document.getElementById("color").value
+            var selector = document.getElementById("selector").value
+            //Borrar los estilos anteriores
+           /* 
+            var lista=document.querySelectorAll("*")
+            for (i=0;i<lista.length-1;i++)
+            {
+            pintar[i].style.backgroundColor="white";
+            }*/
+            //Para poner el estilo
+            var pintar = document.querySelectorAll(selector)
+            for (i=0;i<pintar.length;i++)
+            {
+            pintar[i].style.backgroundColor=color;
+            }
+        }
+        
+        function amarillo() {
+            var isChecked = document.getElementById("amarillo").checked
+            var amarillo = document.querySelectorAll("section")
+            if (isChecked)
+            {
+            for (i in amarillo)
+            {
+            amarillo[i].style.backgroundColor="yellow";
+            }
+            } else {
+            for (i in amarillo)
+            {
+            amarillo[i].style.backgroundColor="white";
+            }
+            }
+        }
+        function rojoh2() {
+            var isChecked = document.getElementById("rojoh2").checked
+            var rojo = document.querySelectorAll("h2")
+            if (isChecked)
+            {
+            for (i in rojo)
+            {
+            rojo[i].style.backgroundColor="red";
+            }
+            } else {
+            for (i in rojo)
+            {
+            rojo[i].style.backgroundColor="white";
+            }
+            }
+        }
+        function verde() {
+            var isChecked = document.getElementById("verde").checked
+            var verde = document.querySelectorAll(".section-a > *")
+            if (isChecked)
+            {
+            for (i in verde)
+            {
+            verde[i].style.backgroundColor="green";
+            }
+            } else {
+            for (i in verde)
+            {
+            verde[i].style.backgroundColor="white";
+            }
+            }
+        }
+        function azul() {
+            var isChecked = document.getElementById("azul").checked
+            var azul = document.querySelectorAll("#division *")
+            if (isChecked)
+            {
+            for (i in azul)
+            {
+            azul[i].style.backgroundColor="blue";
+            }
+            } else {
+            for (i in azul)
+            {
+            azul[i].style.backgroundColor="white";
+            }
+            }
+        }
+
+        function azul2() {
+            var isChecked = document.getElementById("azul2").checked
+            var azul = document.querySelectorAll("h2 ~ *")
+            if (isChecked)
+            {
+            for (i in azul)
+            {
+            azul[i].style.backgroundColor="blue";
+            }
+            } else {
+            for (i in azul)
+            {
+            azul[i].style.backgroundColor="white";
+            }
+            }
+        }
+        function rojo2() {
+            var isChecked = document.getElementById("rojo2").checked
+            var rojo = document.querySelectorAll("ul > *")
+            if (isChecked)
+            {
+            for (i in rojo)
+            {
+            rojo[i].style.backgroundColor="red";
+            }
+            } else {
+            for (i in rojo)
+            {
+            rojo[i].style.backgroundColor="white";
+            }
+            }
+        }
+
+        function verde2() {
+            var isChecked = document.getElementById("verde2").checked
+            var verde = document.querySelectorAll("*[alt]")
+            if (isChecked)
+            {
+            for (i in verde)
+            {
+            verde[i].style.backgroundColor="green";
+            }
+            } else {
+            for (i in verde)
+            {
+            verde[i].style.backgroundColor="white";
+            }
+            }
+        }
+
+        function amarillo2() {
+            var isChecked = document.getElementById("amarillo2").checked
+            var amarillo = document.querySelectorAll("a[name=acerca_de]")
+            if (isChecked)
+            {
+            for (i in amarillo)
+            {
+            amarillo[i].style.backgroundColor="yellow";
+            }
+            } else {
+            for (i in amarillo)
+            {
+            amarillo[i].style.backgroundColor="white";
+            }
+            }
+        }
+
+    </script>
+</body>
+</html>
